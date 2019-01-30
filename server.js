@@ -19,26 +19,6 @@ var allowedUsers = [
 	{"username": "hc2446", "password": "password"},
 	{"username": "zk581", "password": "password"}
 ];
-/*
-Jones, Alden, arj247
-Gudnason, Anna, ag3439
-Sehgol, Bilal, bs3862
-Norton, Emma, ern271
-Mikayelyan, Hayk, hm1973
-Shin, Jiwon, js6450
-Jessup, Lydia, lpj234
-Arakida Izsak, Mai, mn910
-Lam, Mark, ml5952
-Gregg, Nicholas, ngg242
-Skurnik, Rebecca, rs6266
-Chen, Shiyu, sc7278
-Luu, Son Dinh Truong, sdl434
-Aneja, Sukanya, sa5226
-Nakpresha, Tanic, tn1168
-Goyal, Tushar, tg1799
-Chen, Huiyi, hc2446
-Khosravi, Zahra, zk581
-*/
 
 // Database to store data, don't forget autoload: true
 var Datastore = require('nedb');
@@ -162,5 +142,5 @@ app.post('/login', function(req, res) {
 
 });
  
-app.listen(8080)
-console.log("Server is running on port 8080");
+app.listen(80)
+console.log("Server is running on port 80");
