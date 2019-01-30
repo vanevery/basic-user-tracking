@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<script type="text/javascript">
+		
+			var lastlogin = new Date(<%= session.lastlogin %>);
+			
+			window.addEventListener('load', function() {
+				document.getElementById('lastlogin').innerHTML = lastlogin.toDateString();
+				var length = Date.now() - lastlogin;
+				length = length/1000;
+				document.getElementById('length').innerHTML = length;
+			});
+			
+		
+		</script>
+	</head>
+
+	<body>
+		<b>Welcome! <%= session.username %> you last logged in <span id="lastlogin"><%= session.lastlogin %></span>, 
+		have been here <span id="length"></span> seconds and visited <%= session.visits %> times.</b>
+		
+		<br /><br />
+		
+		
+		<br /><br />
+		Here is some more information I know about you:<br />
+		<%= JSON.stringify(headers); %>
+		<br />
+		<% if (session.astro == "aquarius") { %>
+			<b>Happy Birthday</b>
+		<% } %>
+		<br />
+		
+		<a href="/logout">Logout</a>
+		
+		
+		
+		
+	</body>
+</html>	
